@@ -10,6 +10,11 @@ alias ll='ls -lhA --color=auto'
 alias df='df -h'
 alias du='du -h'
 
+alias psx='ps -auxw ¦ grep $1'
+
 alias ..='cd ../'
 alias ...='cd ../../'
 alias cls='clear; ls'
+alias hclear='history -c; clear'
+
+
