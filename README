@@ -1,1 +1,10 @@
-Move along, nothing to see here.
+dotFiles is just a Git repository to store & sync my Unixy config files for Bash, Git, etc.
+
+Most pieces cannot/should not be used as-is, since environments and defaults will differ between Linux, Cygwin, MingW32, etc.
+
+Notes:
+
+- git-completion.bash can be found in the git source under /contrib/completion (http://repo.or.cz/w/git.git?a=tree;f=contrib/completion;hb=HEAD);
+  note that it may already be found in /etc/bash_completition.d/ (e.g. in Debian)
+
+- you might want to nstall git-extras from http://github.com/visionmedia/git-extras.git (git clone & make install)
