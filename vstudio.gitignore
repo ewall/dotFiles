@@ -1,0 +1,36 @@
+### ewall's .gitignore for MS Visual Studio ###
+
+# from StackOverflow: http://stackoverflow.com/questions/2143956/gitignore-for-visual-studio-projects-and-solutions
+
+*.DS_Store
+*.aps
+*.bak
+*.cache
+*.exe
+*.ilk
+*.lib
+*.log
+*.ncb
+*.obj
+*.pch
+*.pdb
+*.sbr
+*.sdf
+*.suo
+*.tlb
+*.tlh
+*.user
+*.vspscc
+*.vssscc
+*StyleCop.Cache
+*_i.c
+*_p.c
+Thumbs.db
+[Bb]in
+[Bb]uild/
+[Dd]ebug*/
+[Rr]elease*/
+[Tt]est[Rr]esult*
+_ReSharper*/
+ipch/
+obj/

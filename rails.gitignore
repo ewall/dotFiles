@@ -1,0 +1,17 @@
+### ewall's .gitignore for Ruby & Rails  ###
+
+# from StackOverflow: http://stackoverflow.com/questions/1969393/rails-exclude-anything-from-version-control
+
+.DS_Store
+log/*.log
+log/*.pid
+tmp/**/*
+
+# for public projbects you probably want to hide these, and more
+config/database.yml
+db/*.sqlite3
+
+# other possibilities... (for Paperclip, Capistrano)
+# public/system/*
+# shared/logs/*
+# shared/pids/*
