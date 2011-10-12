@@ -11,12 +11,14 @@ Set-Alias -Name which     -Value Get-Command
 Set-Alias -Name ll        -Value Get-ChildItem
 
 # useful functions
+
+# from my PS class
 Function global:Get-OSVersion {
   Param( [string]$computer = ".", $credentials )
   If ( $computer -ne "." ) {
-    $os = Get-WmiObject Win32_OperatingSystem -ComputerName $computer -Credential $credentials
+    $os = Get-WmiObject Win32_OperatingSystem -ComputerName $computer -Credential $credentials;
   } Else {
-    $os = Get-WmiObject Win32_OperatingSystem
+    $os = Get-WmiObject Win32_OperatingSystem;
   }
   Switch ($os.BuildNumber) {
     2195    { $osver = "2000" }
@@ -26,4 +28,19 @@ Function global:Get-OSVersion {
     default { $osver = "2008" }
   }
   Return $osver
+}
+
+# from http://blogs.technet.com/b/heyscriptingguy/archive/2010/07/11/hey-scripting-guy-weekend-scripter-checking-for-module-dependencies-in-windows-powershell.aspx
+Function global:Get-MyModule {
+  Param( [string]$name )
+  If (-not (Get-Module -name $name)) {
+    If (Get-Module -ListAvailable | Where-Object { $_.name -eq $name }) {
+      Import-Module -Name $name;
+      $true; # return success
+    } Else {
+      $false; # failed to locate the module
+    }
+  } Else {
+   $true; # module already loaded
+  }
 }

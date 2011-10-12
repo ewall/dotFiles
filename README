@@ -2,9 +2,19 @@ dotFiles is just a Git repository to store & sync my Unixy config files for Bash
 
 Most pieces cannot/should not be used as-is, since environments and defaults will differ between Linux, Cygwin, MingW32, etc.
 
-Notes:
+Consider installing the following:
 
-- git-completion.bash can be found in the git source under /contrib/completion (http://repo.or.cz/w/git.git?a=tree;f=contrib/completion;hb=HEAD);
-  note that it may already be found in /etc/bash_completition.d/ (e.g. in Debian)
+* git add-ons:
 
-- you might want to nstall git-extras from http://github.com/visionmedia/git-extras.git (git clone & make install)
+  - git-completion.bash can be found in the git source under /contrib/completion
+    (e.g. http://repo.or.cz/w/git.git?a=tree;f=contrib/completion;hb=HEAD);
+    -OR- it may already be found in /etc/bash_completition.d/ (e.g. in Debian, msysgit)
+
+  - git-extras from http://github.com/visionmedia/git-extras.git (git clone & make install)
+
+* PowerShell modules:
+
+  - PowerShell Community Extensions (PSCX) from http://pscx.codeplex.com/
+  - PowerShellPack (incl. ISEPack) from http://archive.msdn.microsoft.com/Wiki/View.aspx?ProjectName=PowerShellPack
+  - ISESessionTools from http://www.nivot.org/post/2011/02/14/MakingWindowsPowerShellISEGoodEnough.aspx
+  - PowerShell Tools for IT Admins (multiple) from http://powershell.codeplex.com/
