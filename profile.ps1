@@ -44,3 +44,7 @@ Function global:Get-MyModule {
    $true; # module already loaded
   }
 }
+
+# simple aliases added 2012-01-12
+Function global:help($cmdlet) {Get-Help $cmdlet -Full | more}
+Function global:sign($script) {Set-AuthenticodeSignature $script @(Get-ChildItem cert:\CurrentUser\My -codesigning)[0]}
